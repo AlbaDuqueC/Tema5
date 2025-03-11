@@ -1,16 +1,15 @@
 package boletin1.ejercicio2;
 
-public class Directivo {
+public class Directivo extends Empleado{
 	
-Empleado empleado;
 
 	public Directivo (String e) {
-		empleado= new Empleado(e);
+		super(e);
 	}
 	
 	public String toString() {
 		
-		return empleado.toString()+ " -> Directivo";
+		return super.toString()+ " -> Directivo";
 		
 	}
 

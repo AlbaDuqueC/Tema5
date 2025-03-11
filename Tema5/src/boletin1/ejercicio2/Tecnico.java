@@ -1,16 +1,14 @@
 package boletin1.ejercicio2;
 
-public class Tecnico {
-	
-Operario empleado;
+public class Tecnico extends Operario{
 
 	public Tecnico (String e) {
-		empleado= new Operario(e);
+		super(e);
 	}
 	
 	public String toString() {
 		
-		return empleado.toString()+ " -> Tecnico";
+		return super.toString()+ " -> Tecnico";
 		
 	}
 
