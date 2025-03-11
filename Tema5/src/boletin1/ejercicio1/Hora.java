@@ -21,21 +21,48 @@ public class Hora {
 		if (this.min==60) {
 			this.hora+=1;
 			this.min=0;
+			
+			if(this.hora==24) {
+				this.hora=0;
+			}
 		}
+	}
+	
+	public boolean setMinutos(int valor) {
+		
+		boolean si=false;
+		if (valor < 60 && valor>=0) {
+			this.min=valor;
+			si=true;
+		}
+		return si;
+		
+	}
+	
+	public boolean setHora(int valor) {
+		
+		boolean si=false;
+		if (valor<24 && valor>=0) {
+			this.hora=valor;
+			si=true;
+		}
+		return si;
+		
+	}
+	
+	public String toString() {
+		
+		return this.hora+":"+this.min;
 	}
 	
 	public int getHora() {
 		return hora;
 	}
-	public void setHora(int hora) {
-		this.hora = hora;
-	}
+	
 	public int getMin() {
 		return min;
 	}
-	public void setMin(int min) {
-		this.min = min;
-	}
+	
 	
 	
 
