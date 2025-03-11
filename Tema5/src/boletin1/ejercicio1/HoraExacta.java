@@ -1,14 +1,12 @@
 package boletin1.ejercicio1;
 
-public class HoraExacta {
-	
-	Hora horita;
-	
+public class HoraExacta extends Hora{
+
 	int seg;
 	
 	public HoraExacta(int h, int m, int s) {
 		
-		horita=new Hora(h, m);
+		super(h, m);
 		if(s<60 && s>=0) {
 			this.seg=s;
 		}
@@ -32,13 +30,13 @@ public class HoraExacta {
 		if (this.seg==60) {
 			this.seg=0;
 			
-			horita.inc();
+			super.inc();
 		}
 	}
 	
 	public String toString() {
 		
-		return horita.toString()+":"+this.seg;
+		return super.toString()+":"+this.seg;
 		
 	}
 	
