@@ -20,7 +20,10 @@ public class Television extends Electrodomestico{
 	
 	public void precioFinal() {
 		double precio = super.getPrecioBase();
-		
+		if (this.resolucion>40) {
+			super.setPrecioBase(precio+precio*0.3);
+		}
+		super.precioFinal();
 	}
 
 	public double getResolucion() {
