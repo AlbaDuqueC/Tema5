@@ -11,6 +11,7 @@ public class PrincipalHora {
 		int m=59;
 		int s=59;
 		
+		
 		horita=new Hora(h, m);
 		horitaEx= new HoraExacta(h, m, s);
 		

@@ -1,0 +1,19 @@
+interface Animal 
+	+ comer()
+	+ dormir()
+	+ hacerRuido()
+
+class AnimalDomestico implement Animal
+	- String nombre
+	- String raza
+	- double peso
+	- String color
+	+ vacunar()
+	+ hacerCaso
+	
+class Perro
+	+ hacerRuido //emite un ladrido
+	+ hacerCaso //método boolean que devuelve true el 90% de las veces
+
+
+class Gato
