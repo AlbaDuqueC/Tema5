@@ -1,6 +1,6 @@
 package boletin2.ejercicio1;
 
-public class Socio implements Comparable{
+public class Socio implements Comparable<Socio>{
 	
 	private int id;
 	private String nombre;

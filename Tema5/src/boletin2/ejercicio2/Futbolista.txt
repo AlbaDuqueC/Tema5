@@ -1,0 +1,13 @@
+class Futbolista
+	+ NumCamisetas
+	- nombre
+	- edad
+	- NumGoles
+	+ Futbolista()
+	+ toString()
+	+ equals() //Se considera que dos futbolistas son iguales si coinciden 
+	sus nombres y numero de la camiseta
+	
+interface Comparable
+	
+	//Si tiene el mismo numero, entonces se tendran en cuenta el nombre
