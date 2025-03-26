@@ -11,9 +11,12 @@ class AnimalDomestico implement Animal
 	+ vacunar()
 	+ hacerCaso
 	
-class Perro
+class Perro ext AnimalDomestico
 	+ hacerRuido //emite un ladrido
 	+ hacerCaso //método boolean que devuelve true el 90% de las veces
+	+ sacarPaseo
 
-
-class Gato
+class Gato ext AnimalDomestico
+	+ hacerRuido	//emite un maullido.
+	+ hacerCaso		// método boolean que devuelve true el 5% de las veces.
+	+ toserBolaPelo

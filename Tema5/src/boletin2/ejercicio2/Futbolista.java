@@ -56,14 +56,10 @@ public class Futbolista implements Comparable<Futbolista>{
 		
 		int si=0;
 		
-		if(this.numCamisetas==o.numCamisetas) {
-			
-			if(this.nombre.equals(o.nombre)) {
-				
-				si=1;
-				
-			}
-			
+		si= this.numCamisetas - o.numCamisetas;
+		
+		if(si==0) {
+			si= this.nombre.compareTo(o.nombre);
 		}
 		
 		return si;
