@@ -10,6 +10,9 @@ public interface Animal {
 		System.out.println("zzz");
 	}
 	
-	public void hacerRuido();
+	public default String hacerRuido() {
+		return "";
+		
+	}
 
 }
