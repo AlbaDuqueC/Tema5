@@ -1,0 +1,52 @@
+class Vehiculo
+
+	- String marca
+	- String modelo
+	- String color
+	- char matrícula
+	- boolean encendido
+	- int marcha
+	- int velocidad
+	
+	Vehiculo( marca, modelo, color, matricula )
+	
+	get de todo
+	set de color
+	
+	
+	+ void Parar
+	+ void Arrancar
+	+ void SubirMarcha
+	+ void BajarMarcha
+	+ void acelerar(int velocidad)
+	+ void frenar(int velocidad) 
+
+--------------------------------------------------------------------
+class Turismo ext Vehiculo
+	
+	enum tipouso{PROFESIONAL, PARTICULAR}
+
+	- int numPlazas
+	- tipoUso uso
+	
+	Turismo( marca, modelo, color, matricula, numPlazas, uso)
+	
+--------------------------------------------------------------------	
+class Camion ext Vehiculo
+	
+	- double pesoMax
+	- boolean peligro
+	
+	Camion( marca, modelo, color, matricula, pesoMax, peligro )
+	
+	
+--------------------------------------------------------------------
+class Motocicleta ext Vehiculo
+
+	- double cilindrada
+	
+	Motocicleta( marca, modelo, color, matricula, cilindrada)
+	
+	+ boolean RequiereCarnet() // aquellas cuya cilindrada es mayor o igual a 125 CC
+	
+	
