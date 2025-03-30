@@ -1,52 +1,64 @@
-class Vehiculo
+class Vehiculo 
 
 	- String marca
 	- String modelo
 	- String color
-	- char matrícula
-	- boolean encendido
-	- int marcha
-	- int velocidad
+	- String matricula
 	
-	Vehiculo( marca, modelo, color, matricula )
+	- boolean encendido = false
+	- int marcha = 0
+	- int velocidad = 0
 	
-	get de todo
-	set de color
+	Vehiculo(marca, modelo, color, matricula)
+	getMarca()
+	getModelo()
+	getColor()
+	getMatricula()
+	getEncendido()
+	getMarcha()
+	getVelocidad()
 	
+	setColor(String)
 	
-	+ void Parar
-	+ void Arrancar
-	+ void SubirMarcha
-	+ void BajarMarcha
-	+ void acelerar(int velocidad)
-	+ void frenar(int velocidad) 
+	+ void parar()
+	+ void arrancar()
+	+ void subirMarcha()
+	+ void bajarMarcha()
+	+ boolean acelerar(int velocidad)
+	+ boolean frenar(int velocidad)
 
---------------------------------------------------------------------
-class Turismo ext Vehiculo
+----------------------------------------------------------------------------
 	
-	enum tipouso{PROFESIONAL, PARTICULAR}
+class Turismo extends Vehiculo
+	enum TipoUso {PROFESIONAL, PARTICULAR}
 
 	- int numPlazas
-	- tipoUso uso
+	- TipoUso uso
 	
-	Turismo( marca, modelo, color, matricula, numPlazas, uso)
+	Turismo(marca, modelo, color, matricula, numPlazas, uso)
+	+ getNumPlazas()
+	+ getUso()
 	
---------------------------------------------------------------------	
-class Camion ext Vehiculo
-	
-	- double pesoMax
-	- boolean peligro
-	
-	Camion( marca, modelo, color, matricula, pesoMax, peligro )
-	
-	
---------------------------------------------------------------------
-class Motocicleta ext Vehiculo
+	+ setUso(uso)
 
-	- double cilindrada
+----------------------------------------------------------------------------
+
+class Camion extends Vehiculo
+	- double pesoMaximo
+	- boolean mercanciaPeligrosa
 	
-	Motocicleta( marca, modelo, color, matricula, cilindrada)
+	Camion(marca, modelo, color, matricula, pesoMaximo, mercanciaPeligrosa)
 	
-	+ boolean RequiereCarnet() // aquellas cuya cilindrada es mayor o igual a 125 CC
+	getPesoMaximo()
+	getMercanciaPeligrosa()
 	
+	setMercanciaPeligrosa(boolean)
+
+----------------------------------------------------------------------------
 	
+class Motocicleta extends Vehiculo
+	- int cilindrada
+	
+	Motocicleta(marca, modelo, color, matricula, cilindrada)
+	+ getCilindrada()
+	+ boolean requiereCarnet()
