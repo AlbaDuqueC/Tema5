@@ -3,6 +3,37 @@ class Contacto
 	- String nombre
 	- int telefono
 	
+	+ Contacto(String nombre, int telefono)
+	
+	+ getNombre
+	+ getTelefono
+	+ setTelefono
+	
 	+ boolean equals //Si sus nombres son iguales
 	
-class 
+class Personas exts Contacto
+
+	- String nombreP
+	- int cumpleaños
+	
+	+ Personas(String nombre, String nombreP, int telefono, int cumpleaños)
+	
+	+ getNombreP
+	+ getCumpleaños
+	+ setTelefono
+
+class Empresas exts Contacto
+
+	- String nombreE
+	- String web
+	
+	+ Empresas(String nombre, String nombreE, int telefono, String web)
+	
+	+ getNombreE
+	+ getWeb
+	+ setTefelono
+	+ setWeb
+	
+	
+	
+		
