@@ -28,7 +28,7 @@ class Libro exts Ficha
 class Revistas exts Ficha
 	
 	- int numRevista
-	- int añoPuclicado
+	- int añoPublicado
 	
 	+ Revistas(int id, String titulo, int numRevista, int añoPublicado)
 	

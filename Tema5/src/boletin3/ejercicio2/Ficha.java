@@ -1,14 +1,20 @@
 package boletin3.ejercicio2;
 
 public abstract class Ficha {
-	
+
 	private int id;
 	private String titulo;
-	
+
 	public Ficha(int id, String titulo) {
-		
-		
-		
+
+		if (id > 0) {
+			this.id = id;
+		}
+
+		if (titulo != null && !titulo.isBlank()) {
+			this.titulo = titulo;
+		}
+
 	}
 
 	public int getId() {
@@ -20,14 +26,17 @@ public abstract class Ficha {
 	}
 
 	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+
+		if (titulo != null && !titulo.isBlank()) {
+			this.titulo = titulo;
+		}
 	}
 
 	@Override
 	public String toString() {
 		return "Ficha [id=" + id + ", titulo=" + titulo + "]";
 	}
-	
+
 	public abstract boolean prestar(int tiempo);
 
 }

@@ -1,0 +1,32 @@
+class CuentaBancaria
+	
+	- int numCuenta
+	- int saldo
+	
+	+ boolean ingrsar(int dinero)
+	+ boolean retirar(int dinero)
+	
+	
+class titular
+
+	- ArrayList titulares
+
+	- int DNI
+	- String nombre
+	- String apellido
+	- int telefono
+	- int cont=0
+	
+	+ boolean añadir(int DNI)
+	+ boolean borrar(int DNI)
+	
+class CuentaAhorro ext CuentaBancaria
+	
+	- double cuotaMantenimiento
+	- double interesAnual
+	
+	
+
+class CuentaCorriente ext CuentaBancaria
+	
+	- 

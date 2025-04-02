@@ -1,0 +1,8 @@
+class Contacto
+
+	- String nombre
+	- int telefono
+	
+	+ boolean equals //Si sus nombres son iguales
+	
+class 
