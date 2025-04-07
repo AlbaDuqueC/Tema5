@@ -1,0 +1,58 @@
+class abstrac Ficha 
+
+	- int id
+	- String titulo
+	
+	+ Ficha(int id, String titulo)
+	
+	+ getid()
+	+ gettitulo()
+	+ settitulo(String titulo)
+	
+	+ abstrac boolean prestar(int tiempo)
+	
+class Libro exts Ficha
+
+	- String autor
+	- String editorial
+	
+	+ Libro(int id, String titulo, String autor, String editorial)
+	
+	+ getautor()
+	+ geteditorial()
+	+ seteditorial(String editorial)
+	
+	+ boolean prestar(int tiempo)//15 dias
+	
+
+class Revistas exts Ficha
+	
+	- int numRevista
+	- int añoPublicado
+	
+	+ Revistas(int id, String titulo, int numRevista, int añoPublicado)
+	
+	+ getnumRevista()
+	+ getañoPublicado()
+	+ setnumRevista(int num)
+	
+	+ boolean prestar(int tiempo)//10 dias
+
+class DVD exts Ficha
+	
+	enum tipoDVD {PELICULA, DOCUMENTAL, SERIE}
+	
+	- String director 
+	- int año
+	- tipoDVD tipo
+	
+	+ DVD(int id, String titulo, String director, int año, String tipo)
+	
+	+ getdirector()
+	+ getaño()
+	+ gettipo()
+	+ settipo(String tipo)
+	
+	+ boolean prestar(int tiempo)//5 dias
+	
+	
