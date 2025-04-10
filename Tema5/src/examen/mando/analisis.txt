@@ -1,0 +1,112 @@
+interfaz Volumen 
+
+	+ void subirVolumen
+	+ void bajarVolumen
+
+interfaz Velocidad 
+
+	+ void subirVelocidad
+	+ void bajarVelocidad
+
+class Mando implements Comparable
+	
+	- String modelo
+	- double anchura
+	- double altura
+	- double precio
+	- boolean onOff = false
+	
+	+ Mando (String modelo, double anchura, double altura) throws ModeloExcepcion
+	+ Mando (String modelo, double anchura, double altura, double precio) throws ModeloExcepcion
+	
+	+ getModelo
+	
+	+ getAnchura
+	
+	+ getAltura
+	
+	+ getPrecio
+	+ setPrecio ( double precio )
+	
+	+ isOnOff
+	+ setOnOff ( boolean onOff )
+	
+	Override:
+		+ boolean equals (Obj o) //mismo modelo
+		+ int compareTo (Mando o) //ascendente modelo
+		+ String toString()
+	
+
+class Television extends Mandos implements Volumen
+
+	- int volumen = 0 //va de 5 a 5
+	- int canal = 1
+	
+	+ Television (String modelo, double anchura, double altura) throws ModeloExcepcion
+	+ Television (String modelo, double anchura, double altura, double precio) throws ModeloExcepcion
+	
+	+ getVolumen
+	
+	+ getCanal
+	+ setCanal ( int canal )
+		
+	+ void subirCanal ()
+	+ void bajarCanal ()
+	
+	Override: 
+		+ void subirVolumen () 
+		+ void bajarVolumen ()
+		+ String toString()
+
+class Minicadenas extends Mandos implements Volumen
+	
+	- int volumen //va de 10 en 10
+	
+	+ Minicadenas (String modelo, double anchura, double altura)throws ModeloExcepcion
+	+ Minicadenas (String modelo, double anchura, double altura, double precio)throws ModeloExcepcion
+	
+	+ getVolumen()
+	
+	Override: 
+		+ void subirVolumen ()
+		+ void bajarVolumen ()
+		+ String toString()
+	
+class Aspiradora extends Mandos implemnts Velocidad
+
+	- int velocidad = 0 //max 3 y va de 1 a 1
+	
+	+ Aspiradora (String modelo, double anchura, double altura)throws ModeloExcepcion
+	+ Aspiradora (String modelo, double anchura, double altura, double precio)throws ModeloExcepcion
+		
+	+ getVelocidad()
+
+	Override: 	
+		+ void subirVelocidad()
+		+ void bajarVelocidad()
+		+ String toString()
+	
+class AiresAcondicionados extends Mandos implemnts Velocidad
+	
+	- boolean frioCalor = false //si es true sera calor y false sera frio
+	- int temperatura = 25 
+	- int velocidad = 0 //max 5 y va de 1 a 1
+	
+	+ AiresAcondicionados (String modelo, double anchura, double altura)throws ModeloExcepcion
+	+ AiresAcondicionados (String modelo, double anchura, double altura, double precio)throws ModeloExcepcion
+		
+	+ isFrioCalor()
+	
+	+ getTemperatura()
+	
+	+ getVelocidad()
+	
+	+ void frioCalor()
+	
+	+ void subirTemperatura()
+	+ void bajarTemperatura()
+	
+	Override: 
+		+ void subirVelocidad()
+		+ void bajarVelocidad()
+		+ String toString()
